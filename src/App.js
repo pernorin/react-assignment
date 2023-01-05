@@ -18,3 +18,5 @@ function App() {
 export default App;
 
 // <form onSubmit={handleSubmit}></form>   https://www.w3schools.com/react/react_forms.asp
+// https://www.youtube.com/watch?v=3yrMcx02jXs useContext
+// https://www.youtube.com/watch?v=nyg5Lpl6AiM  filter
