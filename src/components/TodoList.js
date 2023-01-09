@@ -1,11 +1,19 @@
 import React from 'react';
 import Todo from './Todo';
 
-function TodoList() {
+function TodoList({ todos, setTodos, today }) {
 	return (
-		<div>
-			<Todo></Todo>
-		</div>
+		<ul>
+			{todos.map((todo) => (
+				<Todo
+					key={todo.id}
+					todos={todos}
+					setTodos={setTodos}
+					todo={todo}
+					today={today}
+				></Todo>
+			))}
+		</ul>
 	);
 }
 

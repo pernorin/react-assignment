@@ -1,30 +1,28 @@
 import React, { useState } from 'react';
+import FilterToggleButton from './FilterToggleButton';
 
-const today = new Date(Date.now()).toLocaleDateString(undefined, {
-	year: 'numeric',
-	month: 'numeric',
-	day: 'numeric',
-});
-
-function Form() {
-	const [todos, setTodos] = useState([]);
+function Form({ addTodo, today, showFilter, setShowFilter }) {
+	//const [todos, setTodos] = useState([]);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
 		const formData = new FormData(e.target);
-		const res = Object.fromEntries(formData);
+		const res = Object.fromEntries(formData); // kolla om formdata behövs
 		res.id = Math.random() * 100000;
 		e.target.reset();
 		e.target.children[1].focus();
 
-		setTodos((todos) => [...todos, res]);
+		console.log(res);
+		//return res;
+		addTodo(res);
+		//setTodos((todos) => [...todos, res]);
 
 		//setTodos([...todos, res]);
 		//todos.push(res);
 
 		//console.log(todos);
-		console.log(res);
+
 		//console.log(e.target.children);
 		//e.target.children[1].value = '';
 		// e.target.children[3]  - datumfält
@@ -59,16 +57,7 @@ function Form() {
 				</select>
 				<button type='submit'>Add</button>
 			</form>
-			<ul>
-				{/* type='I' */}
-				{todos.map((todo) => {
-					return (
-						<li key={todo.id}>
-							{todo.id} - {todo.todo}
-						</li>
-					);
-				})}
-			</ul>
+			<FilterToggleButton setShowFilter={setShowFilter} showFilter={showFilter} />
 		</>
 	);
 }
