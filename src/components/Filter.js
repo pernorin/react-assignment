@@ -50,9 +50,6 @@ function Filter({ todos, setFilteredTodos, showFilter, setShowFilter }) {
 		}
 	}, [searchWord, categorySearch, setFilteredTodos, todos]);
 
-	//https://upmostly.com/tutorials/react-filter-filtering-arrays-in-react-with-examples
-	// https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#filtering_tasks_in_the_ui
-
 	return (
 		<div className='container filter-container'>
 			<form className='filter-form'>

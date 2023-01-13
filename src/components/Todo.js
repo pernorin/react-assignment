@@ -6,8 +6,6 @@ function Todo({ todo, todos, setTodos, today }) {
 	};
 
 	return (
-		//<div className={todo.due_date < today && 'overdue'}>
-		//<div className={`todo-div ${todo.due_date < today ? 'overdue' : undefined}`}>
 		<div className={todo.due_date < today ? 'overdue' : undefined}>
 			<li>
 				<span className='todo-text'>{todo.todo}</span>
