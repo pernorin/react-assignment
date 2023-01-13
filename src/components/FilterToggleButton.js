@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styling/filterToggleButton.scss';
 
 function FilterToggleButton({ showFilter, setShowFilter }) {
 	const toggleClickHandler = () => {
@@ -6,7 +7,7 @@ function FilterToggleButton({ showFilter, setShowFilter }) {
 	};
 
 	return (
-		<button onClick={toggleClickHandler}>
+		<button onClick={toggleClickHandler} className='filter-toggle-btn'>
 			{showFilter ? 'Hide filter' : 'Show filter'}
 		</button>
 	);

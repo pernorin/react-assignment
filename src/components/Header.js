@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styling/header.scss';
 
 function Header({ setTodos }) {
 	const clearTodos = () => {
@@ -6,10 +7,12 @@ function Header({ setTodos }) {
 	};
 
 	return (
-		<div>
-			Header
-			<button onClick={clearTodos}>clear all</button>
-		</div>
+		<header>
+			<h1>TODO</h1>
+			<button onClick={clearTodos}>
+				CLEAR <br /> ALL
+			</button>
+		</header>
 	);
 }
 

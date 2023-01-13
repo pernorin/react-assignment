@@ -1,0 +1,17 @@
+@import '_global';
+header {
+	text-align: center;
+	padding: 4rem;
+	font-size: 2rem;
+
+	position: relative;
+	background-color: $primary;
+	color: $light;
+
+	button {
+		position: absolute;
+		right: 10px;
+		top: 20px;
+		padding: 0.5rem;
+	}
+}

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;600;900&display=swap');
+
+// br: 710
+
+$primary: hsl(168, 76%, 36%);
+$primaryXX: hsl(161, 35%, 41%);
+$middle: hsl(185, 83%, 39%);
+$secondary: hsl(200, 83%, 37%);
+$attention: hsl(43, 98%, 53%);
+$light: hsl(43, 69%, 90%);
+$blackish: hsl(168, 76%, 4%);
+$whitish: hsl(168, 76%, 98%);
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Kumbh Sans', sans-serif;
+}
+
+button {
+	border: none;
+	background-color: $secondary;
+	color: $whitish;
+	&:hover,
+	&:focus {
+		background-color: darken($secondary, 10%);
+		cursor: pointer;
+		transition: 0.2s ease-in-out;
+	}
+	&:not(:hover) {
+		transition: 0.2s ease-in-out;
+	}
+}
+
+input,
+select {
+	background-color: $whitish;
+	color: $blackish;
+	border: none;
+}
+label,
+legend {
+	color: $blackish;
+	font-weight: 600;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}

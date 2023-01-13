@@ -1,0 +1,32 @@
+@import '_global';
+ul {
+	div {
+		display: flex;
+		justify-content: center;
+		margin: 1rem auto;
+		max-width: 920px;
+	}
+
+	li {
+		width: 70%;
+		display: grid;
+		grid-template-columns: 2fr 2fr 1fr;
+		text-align: start;
+		font-weight: 600;
+
+		span {
+			padding: 0.5rem;
+		}
+	}
+	.delete-btn {
+		padding: 0.5rem;
+	}
+	.overdue .todo-date {
+		width: fit-content;
+		background-color: $attention;
+	}
+	.overdue .todo-date::after {
+		font-size: 0.75rem;
+		content: ' overdue';
+	}
+}

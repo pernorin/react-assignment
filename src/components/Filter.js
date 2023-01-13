@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import FilterToggleButton from './FilterToggleButton';
+import '../styling/filter.scss';
 
 function Filter({ todos, setFilteredTodos, showFilter, setShowFilter }) {
 	const [searchWord, setSearchWord] = useState('');
@@ -53,8 +54,8 @@ function Filter({ todos, setFilteredTodos, showFilter, setShowFilter }) {
 	// https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#filtering_tasks_in_the_ui
 
 	return (
-		<>
-			<form style={{ margin: '2rem 0' }}>
+		<div className='container filter-container'>
+			<form className='filter-form'>
 				<label htmlFor='search'>Find todo:</label>
 				<input
 					type='search'
@@ -79,7 +80,7 @@ function Filter({ todos, setFilteredTodos, showFilter, setShowFilter }) {
 				</fieldset>
 			</form>
 			<FilterToggleButton setShowFilter={setShowFilter} showFilter={showFilter} />
-		</>
+		</div>
 	);
 }
 

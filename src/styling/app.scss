@@ -1,0 +1,11 @@
+@import '_global';
+
+body {
+	text-align: center;
+	height: 100vh;
+	background-color: $light;
+}
+.formAndFilterSection {
+	background-color: $middle;
+	padding: 2rem 0;
+}

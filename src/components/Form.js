@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import FilterToggleButton from './FilterToggleButton';
+import '../styling/form.scss';
 
 function Form({ addTodo, today, showFilter, setShowFilter }) {
 	//const [todos, setTodos] = useState([]);
@@ -29,36 +30,39 @@ function Form({ addTodo, today, showFilter, setShowFilter }) {
 	};
 
 	return (
-		<>
-			<form onSubmit={handleSubmit}>
-				<label htmlFor='todo'>Do:</label>
-				<input
-					type='text'
-					placeholder='Todo'
-					name='todo'
-					id='todo'
-					autoComplete='off'
-					autoFocus
-					required
-				/>
-				<label htmlFor='due_date'>Done:</label>
-				<input
-					type='date'
-					name='due_date'
-					id='due_date'
-					defaultValue={today}
-					min={today}
-				/>
+		<div className='container form-container'>
+			<form onSubmit={handleSubmit} className='todo-form'>
+				<div className='form-box'>
+					<label htmlFor='todo'>Do:</label>
+					<input
+						type='text'
+						placeholder='Todo'
+						name='todo'
+						id='todo'
+						autoComplete='off'
+						autoFocus
+						required
+					/>
+					<label htmlFor='due_date'>Done:</label>
+					<input
+						type='date'
+						name='due_date'
+						id='due_date'
+						defaultValue={today}
+						min={today}
+					/>
 
-				<label htmlFor='category'>At:</label>
-				<select name='category' id='category'>
-					<option value='work'>Work</option>
-					<option value='home'>Home</option>
-				</select>
+					<label htmlFor='category'>At:</label>
+					<select name='category' id='category'>
+						<option value='work'>Work</option>
+						<option value='home'>Home</option>
+					</select>
+				</div>
 				<button type='submit'>Add</button>
 			</form>
+
 			<FilterToggleButton setShowFilter={setShowFilter} showFilter={showFilter} />
-		</>
+		</div>
 	);
 }
 

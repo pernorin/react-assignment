@@ -1,9 +1,10 @@
 import React from 'react';
 import Todo from './Todo';
+import '../styling/todoList.scss';
 
 function TodoList({ todos, setTodos, today }) {
 	return (
-		<ul>
+		<ul className='container'>
 			{todos.map((todo) => (
 				<Todo
 					key={todo.id}

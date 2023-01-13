@@ -10,9 +10,13 @@ function Todo({ todo, todos, setTodos, today }) {
 		//<div className={`todo-div ${todo.due_date < today ? 'overdue' : undefined}`}>
 		<div className={todo.due_date < today ? 'overdue' : undefined}>
 			<li>
-				{todo.todo} - {todo.due_date}
+				<span className='todo-text'>{todo.todo}</span>
+				<span className='todo-date'>{todo.due_date}</span>
+				<span className='todo-category'>{todo.category}</span>
 			</li>
-			<button onClick={deleteTodo}>bort</button>
+			<button onClick={deleteTodo} className='delete-btn'>
+				Remove
+			</button>
 		</div>
 	);
 }

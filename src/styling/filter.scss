@@ -1,0 +1,31 @@
+@import '_global';
+.filter-container {
+	position: relative;
+	height: 160px;
+}
+.filter-form {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	input {
+		padding: 0.25rem;
+	}
+	& > label {
+		margin: 0.25rem 1rem;
+	}
+	fieldset {
+		border: none;
+		padding: 0.25rem;
+	}
+	legend {
+		float: left;
+		margin-left: 1rem;
+	}
+	input[type='radio'] {
+		margin-left: 1rem;
+	}
+}
