@@ -14,6 +14,10 @@ ul {
 		text-align: start;
 		font-weight: 600;
 
+		@include mq($small) {
+			width: 100%;
+		}
+
 		span {
 			padding: 0.5rem;
 		}
@@ -28,5 +32,8 @@ ul {
 	.overdue .todo-date::after {
 		font-size: 0.75rem;
 		content: ' overdue';
+		@include mq($small) {
+			content: unset;
+		}
 	}
 }

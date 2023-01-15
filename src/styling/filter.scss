@@ -2,6 +2,10 @@
 .filter-container {
 	position: relative;
 	height: 160px;
+
+	@include mq($small) {
+		height: 180px;
+	}
 }
 .filter-form {
 	display: flex;
@@ -11,6 +15,13 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+
+	@include mq($medium) {
+		flex-direction: column;
+		max-width: 350px;
+		gap: 16px;
+	}
+
 	input {
 		padding: 0.25rem;
 	}
@@ -27,5 +38,8 @@
 	}
 	input[type='radio'] {
 		margin-left: 1rem;
+		&:checked {
+			accent-color: $secondary;
+		}
 	}
 }

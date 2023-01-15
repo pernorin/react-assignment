@@ -3,13 +3,21 @@
 // br: 710
 
 $primary: hsl(168, 76%, 36%);
-$primaryXX: hsl(161, 35%, 41%);
 $middle: hsl(185, 83%, 39%);
 $secondary: hsl(200, 83%, 37%);
 $attention: hsl(43, 98%, 53%);
 $light: hsl(43, 69%, 90%);
 $blackish: hsl(168, 76%, 4%);
 $whitish: hsl(168, 76%, 98%);
+
+$medium: 910px;
+$small: 590px;
+
+@mixin mq($size) {
+	@media only screen and (max-width: $size) {
+		@content;
+	}
+}
 
 * {
 	box-sizing: border-box;
@@ -48,4 +56,8 @@ legend {
 .container {
 	width: 80%;
 	margin: 0 auto;
+
+	@include mq($medium) {
+		width: 95%;
+	}
 }
